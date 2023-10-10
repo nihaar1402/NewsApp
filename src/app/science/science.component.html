@@ -1,0 +1,15 @@
+<body style="background-color: #343a40;color: aliceblue;"><br>
+  <h1 style="font-family: Verdana, Geneva, Tahoma, sans-serif; margin-left: 8.5%;">SCIENCE</h1><br>
+  <div class="container" >
+    <div class="row">
+      <div *ngFor="let n of newsarray" style="background-color: #343a40;" class="col-sm-4 mb-3 mb-sm-4  " >
+        <ngx-loading-bar [diameter]="'50px'" [fixed]="false" [includeBar]="false"></ngx-loading-bar>
+        <img src="{{ n.urlToImage }}" class="card-img-top" alt="..." />
+            <h5 class="card-title">{{ n.title }}</h5>
+            <p class="card-text">{{ n.description }}</p>
+            <p class="card-text">{{ n.publishedAt }}</p>
+            <a href="{{ n.url }}" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  </body>
